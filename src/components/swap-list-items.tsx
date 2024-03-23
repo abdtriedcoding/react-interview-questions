@@ -26,9 +26,10 @@ export default function SwapListItems() {
     const updatedList2 = [...list2];
     updatedList1.forEach((item, index) => {
       if (item.checked) {
-        const title = updatedList2[index].title;
-        updatedList2[index].title = updatedList1[index].title;
-        updatedList1[index].title = title;
+        [updatedList2[index].title, updatedList1[index].title] = [
+          updatedList1[index].title,
+          updatedList2[index].title,
+        ];
         updatedList1[index].checked = false;
       }
     });
