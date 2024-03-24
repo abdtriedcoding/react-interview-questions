@@ -1,8 +1,10 @@
 // import Counter from "./components/counter-state";
-import CityStateDropdown from "./components/city-state-dropdown";
+// import CityStateDropdown from "./components/city-state-dropdown";
 // import ImageSlider from "./components/image-slider";
 // import PropDemo from "./components/props-demo";
 // import SwapListItems from "./components/swap-list-items";
+
+import Todo from "./components/todo";
 
 // const data = ["apple", "banana", "grapes"];
 
@@ -13,7 +15,8 @@ export default function App() {
       {/* <Counter />
       <PropDemo data={data} /> */}
       {/* <ImageSlider /> */}
-      <CityStateDropdown />
+      {/* <CityStateDropdown /> */}
+      <Todo />
     </>
   );
 }
