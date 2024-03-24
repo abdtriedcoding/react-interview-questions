@@ -1,5 +1,6 @@
 // import Counter from "./components/counter-state";
-import ImageSlider from "./components/image-slider";
+import CityStateDropdown from "./components/city-state-dropdown";
+// import ImageSlider from "./components/image-slider";
 // import PropDemo from "./components/props-demo";
 // import SwapListItems from "./components/swap-list-items";
 
@@ -11,7 +12,8 @@ export default function App() {
       {/* <SwapListItems /> */}
       {/* <Counter />
       <PropDemo data={data} /> */}
-      <ImageSlider />
+      {/* <ImageSlider /> */}
+      <CityStateDropdown />
     </>
   );
 }
