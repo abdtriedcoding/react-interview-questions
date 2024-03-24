@@ -3,6 +3,8 @@ import { useState } from "react";
 export default function Todo() {
   const [input, setInput] = useState("");
   const [data, setData] = useState<string[]>([]);
+  const [checked, setChecked] = useState(false);
+  const [index, setIndex] = useState(0);
 
   const handelAdd = () => {
     if (!input) return alert("Please input value");
@@ -15,6 +17,11 @@ export default function Todo() {
     const arr = [...data];
     const newarr = arr.filter((e) => e !== item);
     setData(newarr);
+  };
+
+  const handelChecked = (e: React.ChangeEvent<HTMLInputElement>, i: number) => {
+    setChecked(e.target.checked);
+    setIndex(i);
   };
 
   return (
@@ -30,8 +37,11 @@ export default function Todo() {
       {data.map((item, i) => {
         return (
           <div className="flex space-x-3" key={i}>
+            <input type="checkbox" onChange={(e) => handelChecked(e, i)} />
             <p>{item}</p>
-            <button onClick={() => handelDelete(item)}>Delete</button>
+            {checked && i === index && (
+              <button onClick={() => handelDelete(item)}>Delete</button>
+            )}
           </div>
         );
       })}
