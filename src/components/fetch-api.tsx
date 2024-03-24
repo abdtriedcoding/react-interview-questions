@@ -7,20 +7,16 @@ export default function FetchAPI() {
   const fetchData = async () => {
     const response = await fetch(`https://randomuser.me/api?page=${1}`);
     const responce = await response.json();
-    setData(responce.results);
-    setPage((prev) => prev + 1);
+    setData((prev) => [...prev, ...responce.results]);
   };
 
   const fetchMore = async () => {
-    const response = await fetch(`https://randomuser.me/api?page=${page}`);
-    const responce = await response.json();
-    setData((prev) => [...prev, ...responce.results]);
     setPage((prev) => prev + 1);
   };
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [page]);
 
   return (
     <div>
