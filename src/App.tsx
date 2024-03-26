@@ -1,4 +1,4 @@
-// import Counter from "./components/counter-state";
+import Counter from "./components/counter-state";
 // import CityStateDropdown from "./components/city-state-dropdown";
 // import ImageSlider from "./components/image-slider";
 // import PropDemo from "./components/props-demo";
@@ -7,7 +7,7 @@
 import CustomsHook from "./components/custom-hooks";
 // import ImageGallery from "./components/image-gallery";
 
-import FurnitureQues from "./components/furntiure-ques";
+// import FurnitureQues from "./components/furntiure-ques";
 // import Form from "./components/usestate-hook";
 
 // import FetchAPI from "./components/fetch-api";
@@ -19,14 +19,14 @@ export default function App() {
   return (
     <>
       {/* <SwapListItems /> */}
-      {/* <Counter />
-      <PropDemo data={data} /> */}
+      <Counter />
+      {/* <PropDemo data={data} /> */}
       {/* <ImageSlider /> */}
       {/* <CityStateDropdown /> */}
       {/* <Todo /> */}
       {/* <FetchAPI /> */}
       {/* <Form /> */}
-      <FurnitureQues />
+      {/* <FurnitureQues /> */}
       {/* <ImageGallery /> */}
       <CustomsHook />
     </>
