@@ -4,7 +4,8 @@
 // import PropDemo from "./components/props-demo";
 // import SwapListItems from "./components/swap-list-items";
 
-import Form from "./components/usestate-hook";
+import FurnitureQues from "./components/furntiure-ques";
+// import Form from "./components/usestate-hook";
 
 // import FetchAPI from "./components/fetch-api";
 // import Todo from "./components/todo";
@@ -21,7 +22,8 @@ export default function App() {
       {/* <CityStateDropdown /> */}
       {/* <Todo /> */}
       {/* <FetchAPI /> */}
-      <Form />
+      {/* <Form /> */}
+      <FurnitureQues />
     </>
   );
 }
