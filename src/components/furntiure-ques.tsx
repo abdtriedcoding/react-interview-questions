@@ -1,29 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import useData from "../hook/useData";
 
 export default function FurnitureQues() {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { data, error, loading } = useData(
+    "https://api.storerestapi.com/products"
+  );
   const [input, setInput] = useState("");
-
-  const handelFetchData = async () => {
-    try {
-      const response = await fetch("https://api.storerestapi.com/products");
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
-      }
-      const responseData = await response.json();
-      setData(responseData.data);
-    } catch (error) {
-      setError("Error fetching data");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    handelFetchData();
-  }, []);
 
   if (loading) {
     return <p>Loading...</p>;
