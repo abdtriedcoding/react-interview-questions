@@ -4,6 +4,7 @@ export default function FurnitureQues() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [input, setInput] = useState("");
 
   const handelFetchData = async () => {
     try {
@@ -32,13 +33,29 @@ export default function FurnitureQues() {
     return <p>{error}</p>;
   }
 
+  let filteredData = data;
+  if (input.trim() !== "") {
+    filteredData = data.filter((item) =>
+      item.title.toLowerCase().includes(input.toLowerCase())
+    );
+  }
+
   return (
     <>
-      {data.map((data) => (
-        <p key={data.title} className="font-semibold text-lg p-2">
-          {data.title}
-        </p>
-      ))}
+      <input
+        value={input}
+        type="text"
+        onChange={(e) => setInput(e.target.value)}
+      />
+      {filteredData.length > 0 ? (
+        filteredData.map((data) => (
+          <p key={data.title} className="font-semibold text-lg p-2">
+            {data.title}
+          </p>
+        ))
+      ) : (
+        <p>No data available</p>
+      )}
     </>
   );
 }
