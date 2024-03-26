@@ -4,7 +4,9 @@
 // import PropDemo from "./components/props-demo";
 // import SwapListItems from "./components/swap-list-items";
 
-import FurnitureQues from "./components/furntiure-ques";
+import ImageGallery from "./components/image-gallery";
+
+// import FurnitureQues from "./components/furntiure-ques";
 // import Form from "./components/usestate-hook";
 
 // import FetchAPI from "./components/fetch-api";
@@ -23,7 +25,8 @@ export default function App() {
       {/* <Todo /> */}
       {/* <FetchAPI /> */}
       {/* <Form /> */}
-      <FurnitureQues />
+      {/* <FurnitureQues /> */}
+      <ImageGallery />
     </>
   );
 }
