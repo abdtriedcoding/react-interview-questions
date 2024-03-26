@@ -1,10 +1,11 @@
-import Counter from "./components/counter-state";
+// import Counter from "./components/counter-state";
 // import CityStateDropdown from "./components/city-state-dropdown";
 // import ImageSlider from "./components/image-slider";
 // import PropDemo from "./components/props-demo";
 // import SwapListItems from "./components/swap-list-items";
 
-import CustomsHook from "./components/custom-hooks";
+// import CustomsHook from "./components/custom-hooks";
+import InputForm from "./components/input-form";
 // import ImageGallery from "./components/image-gallery";
 
 // import FurnitureQues from "./components/furntiure-ques";
@@ -19,7 +20,7 @@ export default function App() {
   return (
     <>
       {/* <SwapListItems /> */}
-      <Counter />
+      {/* <Counter /> */}
       {/* <PropDemo data={data} /> */}
       {/* <ImageSlider /> */}
       {/* <CityStateDropdown /> */}
@@ -28,7 +29,8 @@ export default function App() {
       {/* <Form /> */}
       {/* <FurnitureQues /> */}
       {/* <ImageGallery /> */}
-      <CustomsHook />
+      {/* <CustomsHook /> */}
+      <InputForm />
     </>
   );
 }
