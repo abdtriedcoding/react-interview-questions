@@ -4,7 +4,9 @@
 // import PropDemo from "./components/props-demo";
 // import SwapListItems from "./components/swap-list-items";
 
-import FetchAPI from "./components/fetch-api";
+import Form from "./components/usestate-hook";
+
+// import FetchAPI from "./components/fetch-api";
 // import Todo from "./components/todo";
 
 // const data = ["apple", "banana", "grapes"];
@@ -18,7 +20,8 @@ export default function App() {
       {/* <ImageSlider /> */}
       {/* <CityStateDropdown /> */}
       {/* <Todo /> */}
-      <FetchAPI />
+      {/* <FetchAPI /> */}
+      <Form />
     </>
   );
 }
