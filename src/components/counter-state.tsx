@@ -1,18 +1,12 @@
-import { useState } from "react";
+import useCounter from "../hook/useCounter";
 
 export default function Counter() {
-  const [count, setCount] = useState(0);
-  console.log("Mounted");
-  
+  const { count, handelDecrement, handelIncrement } = useCounter();
   return (
     <div className="flex space-x-4 flex-col items-center justify-center">
       Counter: {count}
-      <button onClick={() => setCount((prev) => prev + 1)}>
-        Count Increase
-      </button>
-      <button onClick={() => setCount((prev) => prev - 1)}>
-        Count Decrease
-      </button>
+      <button onClick={handelIncrement}>Count Increase</button>
+      <button onClick={handelDecrement}>Count Decrease</button>
     </div>
   );
 }
