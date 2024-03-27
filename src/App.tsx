@@ -4,8 +4,10 @@
 // import PropDemo from "./components/props-demo";
 // import SwapListItems from "./components/swap-list-items";
 
+import Median2sortedArrays from "./algorithms/median2sortedArrays";
+
 // import CustomsHook from "./components/custom-hooks";
-import InputForm from "./components/input-form";
+// import InputForm from "./components/input-form";
 // import ImageGallery from "./components/image-gallery";
 
 // import FurnitureQues from "./components/furntiure-ques";
@@ -30,7 +32,8 @@ export default function App() {
       {/* <FurnitureQues /> */}
       {/* <ImageGallery /> */}
       {/* <CustomsHook /> */}
-      <InputForm />
+      {/* <InputForm /> */}
+      <Median2sortedArrays />
     </>
   );
 }
